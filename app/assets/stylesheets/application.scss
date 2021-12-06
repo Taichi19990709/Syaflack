@@ -1,0 +1,57 @@
+/* *= require simple_calendar
+*= require_tree .
+*= require_self */
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+      Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  }
+
+  header a {
+    color: white; 
+    text-decoration: none; 
+  }
+  header h1 {
+    color: white;
+    margin-left: 20px;
+  }
+  .header-list {
+    display: flex;
+    align-items: center;
+  }
+  header ul {
+    display: flex;
+  }
+
+  header li {
+    list-style: none;
+    margin-right: 40px;
+  }
+  
+  footer {background-color: #92f097;
+    height: 30px;
+    justify-content: flex-end;
+  }
+
+  footer p {color: azure; 
+  }
+
+  .navbar-brand { font-size: x-large;
+
+  }
+
+  .simple-calendar {  
+    .prev-month a {
+      display: none;
+    }
+    .next-month a {
+      display: none;
+    }
+  }
+
+
+@import "bootstrap";

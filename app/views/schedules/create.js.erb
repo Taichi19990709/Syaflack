@@ -1,0 +1,4 @@
+$("text_area").val("");
+$("input").val("");
+$('#staticBackdrop1').modal('hide');
+$('#userevents').html("<%= escape_javascript(render 'users/events', {user: @user, schedules:@schedules}) %>");

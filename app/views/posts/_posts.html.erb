@@ -1,0 +1,22 @@
+
+<body>
+        <% posts.each do |t| %>
+
+            <% if user_signed_in? && current_user.id == t.user_id %>  
+
+<div class="card text-center col-5 m-lg-auto">
+  <div class="card-header" style="font-size: x-large; font-weight:bold; background-color:#66FF66">
+    <span class = "badge bg-success"><%= t.importanceoftask %></span>    
+  </div>
+  <div class="card-body m-md-2">
+    <h3 class="card-title m-md-4"><%= t.task %></h3>
+    <%= link_to "編集する", edit_post_path(t.id), class: "btn-primary btn-lg", data:{remote: true}, style: "text-decoration: none;" %>
+    <%= link_to "達成！", post_path(t.id), method: :delete, data: { confirm: '本当に削除しますか？',remote:true} , class: "btn-danger btn-lg", style: "text-decoration: none;"%>　
+  </div>
+  <div class="card-footer text-muted" style="font-size: x-large; font-weight:bold; background-color:#66FF66; color:#000000;">
+  <%= t.datetime&.strftime("%Y年%m月%d日%H時%M分") %>
+  </div>
+</div>
+        <% end %>
+        <% end %>
+</body>

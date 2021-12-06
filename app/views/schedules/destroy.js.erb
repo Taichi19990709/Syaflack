@@ -1,0 +1,8 @@
+$('#allschedules').html("<%= escape_javascript(render 'posts/schedules', schedules: @schedules) %>");
+$('#userevents').html("<%= escape_javascript(render 'users/events', {user: @user, schedules:@schedules}) %>");
+$('#staticBackdrop1').modal('hide');
+$('#exampleModal').modal('hide');
+$('body').removeClass('modal-open');
+$('.modal-backdrop').remove();
+$("textarea").val("");
+$("input").val("");

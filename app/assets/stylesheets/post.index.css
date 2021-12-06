@@ -1,0 +1,112 @@
+.schedule {
+    background-color:#f3ece1;
+    display:flex;
+    justify-content: space-around;
+    padding: auto;
+    margin: auto;  
+}
+
+a:hover{
+    opacity: 0.6; /*マウスオーバー時に画像を透過する設定 */
+    }
+
+.schedule-link{
+    display: block;
+}
+.schedule-content{
+    border: 2px solid;
+    border-color: black;
+    width: 33%;
+}
+
+.schedule-content:hover{
+    opacity: 0.6; /*マウスオーバー時に画像を透過する設定 */
+    }
+
+.post{
+    padding: auto;
+    margin: auto;
+    height: auto;
+}
+
+.post-container{
+    display: flex;
+    background-color: rgb(164, 240, 13);
+    height: auto;
+    padding: auto;
+    border: 2px solid;
+    border-color: black;
+    margin: auto;
+}
+
+.left-container{
+    width:95%;
+    background-color: yellow;
+    height: auto;
+    padding: auto;
+    margin:auto;
+}
+
+.left-container:hover{
+    opacity: 0.6; /*マウスオーバー時に画像を透過する設定 */
+
+}
+
+
+.right-container{
+    width: 5%;
+    background-color: rgb(211, 155, 155);
+    height: 150px;
+    padding: auto;
+    margin:auto;
+}
+
+.upper{
+    display: flex;
+    padding: auto;
+    margin: auto;
+    justify-content: space-around;
+    background-color: wheat;
+    height: 100px;
+}
+
+.task{
+    font-size: xx-large;
+    padding: auto;
+    margin: auto;
+}
+.importantoftask{
+    font-size: x-large;
+    padding: auto;
+    margin: auto;
+}
+
+.lower{
+    display: flex;
+    justify-content: space-around;
+    background-color: violet;
+    height: 50px;
+    padding: auto;
+    margin: auto;
+}
+
+.datetime{
+    padding: auto;
+    margin: auto;
+    font-size: larger;
+}
+
+.delete{
+    background: none;
+    border: none;
+    padding: auto;
+    margin:auto;
+}
+
+.fire{
+    color: crimson;
+}
+
+.post-show-link{ 
+    display: block;
+}

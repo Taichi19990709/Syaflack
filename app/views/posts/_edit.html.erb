@@ -1,0 +1,35 @@
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">詳細</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+　　　<%= form_for @post, remote: true do |form| %>
+      <div class="modal-body">
+        <br>
+          <div class="form-group">
+          <%= form.text_field :task,size:55, class:"form-control"%>
+          </div>
+        <br>
+
+          <div class="form-group">
+          <%= form.select :importanceoftask, [["高", "高"], ["中", "中"], ["低", "低"]] ,{ include_blank:"重要度"},{class:'form-control', required: true}%>
+          </div>
+
+        <br>
+            <div class="form-group">
+          <%= label :datetime, "期限" %>
+          <%= form.datetime_field :datetime,size:140, class:"form-control", required:true %>
+          </div>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">キャンセル</button>
+        <%= form.submit "編集する", class: "btn-primary btn-lg" %>
+　　　　
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+$("textarea").val("");
+$("input").val("");
+$('#staticBackdrop').modal('hide');
+$('#alltasks').html("<%= escape_javascript(render 'posts', posts: @posts) %>");
+$('body').removeClass('modal-open');
+$('.modal-backdrop').remove();

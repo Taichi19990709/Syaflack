@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag "user.show", :media => "all"%>
+
+<body>
+
+<br>
+<br>
+
+<div id = "showschedule"></div>
+
+<div id = "editschedule"></div>
+
+<div id = "userevents"><%= render "events" , {user: @user,schedules:@schedules} %></div>
+
+<div id = 'newschedule'></div>
+
+<body>

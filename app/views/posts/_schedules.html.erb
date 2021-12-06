@@ -1,0 +1,7 @@
+    <ul class="list-group list-group-horizontal m-md-auto">
+        <% @schedules.each do |t| %>
+            <% if user_signed_in? && current_user.id == t.user_id %>  
+    <li class="list-group-item list-group-item-action list-group-item-success flex-fill"><%= link_to t.title, schedule_path(t.id), data:{remote:true}, style: "text-decoration: none; display:block;" %></li>
+            <% end %>
+        <% end %>
+    </ul>

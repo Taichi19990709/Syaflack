@@ -9,7 +9,7 @@ class PostsController < ApplicationController
             @post = Post.new
             @posts = Post.where(user_id:current_user.id).order(datetime: :asc).limit(5)
             @schedules = Schedule.where(user_id:current_user.id).order(start_time: :asc).limit(3)
-            
+
             # elsif params[:search] == ''
             #@posts = Post.all.order(datetime: :asc).limit(5)
             #@schedules = Schedule.order(start_time: :asc).limit(3)

@@ -36,6 +36,8 @@ class PostsController < ApplicationController
         post.save
         #@posts = Post.all.order(datetime: :asc).limit(5)
         @posts = Post.where(user_id:current_user.id).order(datetime: :asc).limit(5)
+            
+        
 
     end
 

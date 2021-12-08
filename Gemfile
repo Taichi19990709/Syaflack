@@ -66,6 +66,12 @@ gem 'pry-rails'
 
 gem 'clockwork' , '>= 2.0.4'
 
+gem 'omniauth-line'
+
+gem 'omniauth', '~> 1.9.1'
+
+gem 'dotenv-rails'
+
 group :production do
   gem 'pg'
 end

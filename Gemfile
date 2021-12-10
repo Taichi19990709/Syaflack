@@ -72,6 +72,8 @@ gem 'omniauth', '~> 1.9.1'
 
 gem 'dotenv-rails'
 
+gem 'line-bot-api'
+
 group :production do
   gem 'pg'
 end

@@ -37,7 +37,7 @@
       </ul>
 
         <form class="d-flex">
-        <%= form_tag({controller: "posts", action: "search"}, method: :get) do %>
+        <%= form_tag({controller: "posts", action: "search"}, method: :get,remote:true) do %>
           <%= text_field_tag :search,nil,placeholder:'キーワードを入力',class:"form-control"%>
           <%=link_to '検索する', search_posts_path, class:"btn btn-success", data: {remote:true}  %>
         <% end %>

@@ -33,6 +33,7 @@ class PostsController < ApplicationController
     def create
         post = Post.new(post_params)
         post.user_id = current_user.id
+        @post.user_uid = current_user.uid
         post.save
         #@posts = Post.all.order(datetime: :asc).limit(5)
         @posts = Post.where(user_id:current_user.id).order(datetime: :asc).limit(5)

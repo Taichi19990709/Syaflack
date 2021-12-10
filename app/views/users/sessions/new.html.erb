@@ -46,3 +46,29 @@
           "> LINEログインする </a>
 
 </div>
+
+<!-- 切り替えボタンの設定 -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  ココを押すと表示
+</button>
+
+<!-- モーダルの設定 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">モーダルのタイトル</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        <p>ログイン時にはあなたのメールアドレスが必要です！</p>
+        <br>
+        <p>同意しますか？</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">いいえ</button>
+        <%=link_to "https://access.line.me/oauth2/v2.1/authorize?client_id=1656711626&redirect_uri=https%3A%2F%2Fsyaflack%2Fusers%2Fauth%2Fline%2Fcallback&response_type=code&scope=profile+openid&state=d715b232eab85d8d3a3020d72736c5fad8842e1e072ca59a", "同意する"%>
+      </div><!-- /.modal-footer -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

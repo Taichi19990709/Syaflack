@@ -10,7 +10,7 @@ class SchedulesController < ApplicationController
     def create
         schedule = Schedule.new(schedule_params)
         schedule.user_id = current_user.id
-        @post.user_uid = current_user.uid
+        schedule.user_uid = current_user.uid
         schedule.save
         @schedules = current_user.schedules
         @user = current_user

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_07_143531) do
+ActiveRecord::Schema.define(version: 2021_12_10_200952) do
 
   create_table "posts", force: :cascade do |t|
     t.text "task"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_12_07_143531) do
     t.datetime "datetime"
     t.integer "user_id"
     t.string "importanceoftask"
+    t.string "user_uid"
   end
 
   create_table "schedules", force: :cascade do |t|
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_12_07_143531) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
+    t.string "user_uid"
   end
 
   create_table "users", force: :cascade do |t|

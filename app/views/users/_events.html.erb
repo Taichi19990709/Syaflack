@@ -10,9 +10,9 @@
 
         <% schedules.each do |schedules| %>
             <% if user_signed_in? && current_user.id == schedules.user_id %>  
-
+            <div style = "display:flex;">
             <%= link_to schedules.title, edit_schedule_path(schedules.id), data:{remote:true}, style: "text-decoration: none;" %>
-
+            </div>
             <%end%>
         <%end%>
         

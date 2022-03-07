@@ -9,7 +9,6 @@ class PostsController < ApplicationController
             @post = Post.new
             @posts = Post.where(user_id:current_user.id).order(datetime: :asc).limit(5)
             @schedules = Schedule.where(user_id:current_user.id).order(start_time: :asc).limit(3)
-
             # elsif params[:search] == ''
             #@posts = Post.all.order(datetime: :asc).limit(5)
             #@schedules = Schedule.order(start_time: :asc).limit(3)
@@ -77,11 +76,15 @@ class PostsController < ApplicationController
         else
             @posts = Post.where("task LIKE ?", '%' + params[:search] + '%')
         end
+        redirect_to request.referer
     end
+
 
     private
     def post_params
     params.require(:post).permit(:task, :datetime, :importanceoftask,)
     end
+
+
 
 end

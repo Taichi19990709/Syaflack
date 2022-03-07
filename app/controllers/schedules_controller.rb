@@ -36,7 +36,7 @@ class SchedulesController < ApplicationController
         schedule = Schedule.find(params[:id])
         schedule.update(schedule_params)
         schedule.save
-        @schedules = Schedule.where(user_id:current_user.id).order(start_time: :asc).limit(3)
+        @schedules = Schedule.where(user_id:current_user.id)
         #@schedules = Schedule.all.order(datetime: :asc).limit(3)
     end
 

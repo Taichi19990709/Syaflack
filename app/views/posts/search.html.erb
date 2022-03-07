@@ -1,0 +1,7 @@
+<script>
+          $("#search-button").click(function(){
+                  $('#searchmodal').html("<%= escape_javascript(render 'search', posts:@posts)%>");
+                  $('#s-modal').modal('show');
+          })
+          </script>
+          <%= link_to '検索する', search_posts_path, class:"btn btn-success", data: {remote:true}  %>

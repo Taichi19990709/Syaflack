@@ -41,7 +41,7 @@
 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
-                <%= form.submit "追加する", class: "btn btn-primary" %>
+                <%= form.submit "完了", class: "btn btn-primary" %>
                 <%= link_to "削除", schedule_path(@schedule.id), method: :delete, data: { confirm: '本当に削除しますか？',remote:true} , class: "btn btn-danger", style: "text-decoration: none;"%>　
       </div>
                 <% end %>
